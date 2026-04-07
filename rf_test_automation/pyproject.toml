@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rf-test-automation"
+version = "0.1.0"
+description = "Automation framework for SMCV100B sensitivity and SGT100A adjacent-channel interference tests"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pyvisa>=1.14",
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+rf-test = "rf_test_automation.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
