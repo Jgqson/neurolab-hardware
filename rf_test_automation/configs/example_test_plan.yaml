@@ -1,0 +1,27 @@
+visa:
+  smcv100b: "TCPIP0::192.168.1.101::inst0::INSTR"
+  sgt100a: "TCPIP0::192.168.1.102::inst0::INSTR"
+
+common:
+  center_frequency_hz: 915000000
+  modulation: "QPSK"
+  symbol_rate: 1000000
+  cable_loss_db: 2.0
+  settle_time_s: 0.2
+  sensitivity_step_db: 1.0
+
+sensitivity:
+  start_power_dbm: -80
+  min_power_dbm: -120
+  ber_threshold: 0.001
+
+aci:
+  wanted_power_dbm: -90
+  offsets_hz: [25000, 50000, 100000]
+  start_interferer_dbm: -110
+  stop_interferer_dbm: -70
+  interferer_step_db: 2
+  ber_threshold: 0.01
+
+output:
+  csv_path: "results/test_results.csv"

@@ -35,3 +35,15 @@ A difference to existing projects like OpenBCI is that it will not be necessary 
 ## License
 
 This project is licensed under the Apache License 2.0. A copy of [LICENSE](LICENSE) is to be present along with the source code. To obtain the software under a different license, please contact FOSSASIA.
+
+## RF 自动化测试子项目
+
+已新增 `rf_test_automation/` 目录，用于控制 SMCV100B 与 SGT100A 进行灵敏度和邻道干扰自动化测试。
+
+快速开始：
+
+```bash
+cd rf_test_automation
+pip install -e .
+rf-test --config configs/example_test_plan.yaml --dry-run
+```
